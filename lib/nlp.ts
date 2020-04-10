@@ -16,4 +16,4 @@ function sensitive(query: Object) {
     return transferNLP('SENSITIVE', query)
 }
 
-export default { tokenize, ner, sentiment, sensitive };
+export const nlp = { tokenize, ner, sentiment, sensitive };

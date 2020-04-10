@@ -27,8 +27,9 @@ async function transferNLP(nlpType: string, query: Object) {
             reject(error)
             return
         }
+
         let token = genToken(query)
-        await request.post(`${api[`${nlpType}`]}/${TOKEN}`, {
+        await request.post(`${api[nlpType]}/${TOKEN}`, {
             json: {
                 query: token
             }

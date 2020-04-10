@@ -1,10 +1,4 @@
-import openai from "../index"
-
-let {
-    init,
-    chat,
-    nlp
-} = openai
+import { init, chat, nlp } from "../index";
 
 init({
     TOKEN: 'PWj9xdSdGU3PPnqUUrTf7uGgQ9Jvn7',

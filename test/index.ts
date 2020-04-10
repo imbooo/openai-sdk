@@ -1,11 +1,6 @@
 import assert from 'assert';
 import { expect } from 'chai';
-import * as openai from "../index"
-let {
-    init,
-    chat,
-    nlp
-} = openai.default
+import { init, chat, nlp } from "../index";
 
 let { tokenize, ner, sentiment, sensitive } = nlp
 init({
@@ -14,7 +9,7 @@ init({
 })
 describe('chat',() => {
   it('test chat', async () => {
-    let chatRes = await chat({
+    let chatRes: any = await chat({
       username: "uid",
       msg: "你好吗"
     })

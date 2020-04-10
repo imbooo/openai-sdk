@@ -7,12 +7,10 @@
     "start": "ts-node-dev --respawn --transpileOnly --prefer-ts example/index.ts",
     "test": "ts-mocha --paths test/index.ts"
   },
-
   "repository": {
     "type": "git",
     "url": "git+https://github.com/WeChatAI/openai-sdk.git"
   },
-
   "bugs": {
     "url": "https://github.com/WeChatAI/openai-sdk/issues"
   },
@@ -35,6 +33,7 @@
     "@babel/register": "^7.7.0",
     "@types/expect": "^24.3.0",
     "@types/mocha": "^5.2.7",
+    "@types/node": "^13.11.1",
     "chai": "^4.2.0",
     "mocha": "^6.2.2",
     "njwt": "^1.0.0",

@@ -1,6 +1,5 @@
 node_modules/
 app/
-dist/
 logs/
 .idea/
 ./pm2
