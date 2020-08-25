@@ -1,46 +1,33 @@
-const nJwt = require('njwt');
-const request = require('request')
-import { TOKEN, EncodingAESKey } from './auth';
-import * as api from './API'
+import * as nJwt from "njwt";
+import * as api from "./API";
+import axios from "axios";
+import { TOKEN, EncodingAESKey } from "./auth";
 
 function checkInit() {
-    let error = ""
-    if (!TOKEN) {
-        error = "TOKEN不能为空，请先调用init方法初始化"
-    }
-    if (!EncodingAESKey) {
-        error = "EncodingAESKey不能为空，请先调用init方法初始化"
-    }
-    return error
+  let error = "";
+  if (!TOKEN) {
+    error = "TOKEN不能为空，请先调用init方法初始化";
+  }
+  if (!EncodingAESKey) {
+    error = "EncodingAESKey不能为空，请先调用init方法初始化";
+  }
+  return error;
 }
 
 function genToken(query) {
-    let jwt = nJwt.create(query, EncodingAESKey, "HS256");
-    let token = jwt.compact();
-    return token;
+  let jwt = nJwt.create(query, EncodingAESKey, "HS256");
+  return jwt.compact();
 }
 
-async function transferNLP(nlpType: string, query: Object) {
-    return new Promise(async (resolve, reject) => {
-        let error = checkInit()
-        if (!!error) {
-            reject(error)
-            return
-        }
+async function transferNLP<T>(nlpType: string, query: Object): Promise<T> {
+  let error = checkInit();
+  if (!!error) {
+    throw new Error(error);
+  }
 
-        let token = genToken(query)
-        await request.post(`${api[nlpType]}/${TOKEN}`, {
-            json: {
-                query: token
-            }
-        }, (error, stderr, stdout) => {
-            if (error) {
-                reject(error)
-                return
-            }
-            resolve(stdout)
-        })
-    })
+  const token = genToken(query);
+  const res = await axios.post<T>(`${api[nlpType]}/${TOKEN}`, { query: token });
+  return res.data;
 }
 
-export { checkInit, genToken, transferNLP }
+export { checkInit, genToken, transferNLP };
