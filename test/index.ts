@@ -1,6 +1,6 @@
 import assert from 'assert';
 import { expect } from 'chai';
-import { init, chat, nlp } from "../index";
+import { init, chat, nlp } from "../src";
 
 let { tokenize, ner, sentiment, sensitive } = nlp
 init({

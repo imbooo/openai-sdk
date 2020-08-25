@@ -8,3 +8,5 @@ protobuf/protobuf.d.ts
 .DS_Store
 npm-debug.log
 config/test
+dist/
+types/

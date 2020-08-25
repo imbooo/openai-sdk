@@ -1,4 +1,4 @@
-import { init, chat, nlp } from "../index";
+import { init, chat, nlp } from "../src";
 
 init({
     TOKEN: 'PWj9xdSdGU3PPnqUUrTf7uGgQ9Jvn7',

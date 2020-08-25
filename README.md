@@ -1,11 +1,12 @@
+官方的版本安装了使用不起来，所以fork修改了一下。(〃'▽'〃)
 # 快速开始
 
-## 1. 安装openai-sdk
+## 1. 安装wechat-openai
 
 ```js
 
-  npm i openai-sdk
-  import openai-sdk from 'openai-sdk'
+  yarn add wechat-openai
+  import * as OpenAI from 'wechat-openai'
 
 ```
 
@@ -13,12 +14,7 @@
 
 ```js
 
-  import openai from 'openai-sdk'
-  let {
-      init,
-      chat,
-      nlp
-  } = openai
+  import { init, chat } from 'wechat-openai'
   init({
     TOKEN: "",
     EncodingAESKey: ""
