@@ -1,4 +1,11 @@
 # Changelog
+## [0.3.0](https://github.com/imbooo/wechat-openai/compare/v0.2.0...v0.3.0) (2021-03-11)
+
+
+### Features
+
+* 重新组织项目结构。 ([446cffc](https://github.com/imbooo/wechat-openai/commit/446cffc1eacf6ffa8c44735ae2a7d11e92046694))
+
 ## [0.2.0](https://github.com/imbooo/wechat-openai/compare/v0.1.1...v0.2.0) (2020-08-25)
 
 
