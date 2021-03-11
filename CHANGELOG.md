@@ -1,4 +1,11 @@
 # Changelog
+### [0.3.1](https://github.com/imbooo/wechat-openai/compare/v0.3.0...v0.3.1) (2021-03-11)
+
+
+### Bug Fixes
+
+* 修复ts types路径。 ([f30a7a8](https://github.com/imbooo/wechat-openai/commit/f30a7a88c10880661e5077da8a3a0165a7dc80ca))
+
 ## [0.3.0](https://github.com/imbooo/wechat-openai/compare/v0.2.0...v0.3.0) (2021-03-11)
 
 
