@@ -1,8 +1,8 @@
 import { NLP } from "./nlp";
 import { Base } from "./base";
-import { IAnswer } from "./interface";
+import { IAnswer } from "./model";
 
-export * from "./interface";
+export * from "./model";
 export * from "./nlp";
 
 export class OpenAI extends Base {
