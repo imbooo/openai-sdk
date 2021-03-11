@@ -6,7 +6,7 @@
 ```js
 
   yarn add wechat-openai
-  import * as OpenAI from 'wechat-openai'
+  import { OpenAI } from 'wechat-openai'
 
 ```
 
@@ -14,11 +14,8 @@
 
 ```js
 
-  import { init, chat } from 'wechat-openai'
-  init({
-    TOKEN: "",
-    EncodingAESKey: ""
-  })
+  import { OpenAI } from 'wechat-openai'
+ const ai = new OpenAI("","")
 
 ```
 
@@ -26,7 +23,7 @@
 
 ```js
 
-  chat({
+  ai.chat({
     username: "uid",
     msg: "你好吗"
   }).then(res => {
@@ -45,7 +42,7 @@
 
 ```js
     // 分词
-    nlp.tokenize({
+    ai.nlp.tokenize({
         uid: "uid",
         data: {
             q: "我的家乡叫中国。"
@@ -73,7 +70,7 @@
 
 ```js
     // 数字日期时间识别
-    nlp.ner({
+    ai.nlp.ner({
         uid: "uid",
         data: {
             q: "帮我订两张后天上午的火车票"
@@ -107,7 +104,7 @@
 
 ```js
     // 情感分析
-    nlp.sentiment({
+    ai.nlp.sentiment({
         uid: "uid",
         data: {
             q: "恭喜小张脱单成功",
@@ -139,7 +136,7 @@
 
 ```js
     // 敏感词识别
-    nlp.sensitive({
+    ai.nlp.sensitive({
         uid: "uid",
         data: {
             q: "楼主真垃圾，祝你早日死全家"

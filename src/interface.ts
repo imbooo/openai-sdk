@@ -1,5 +1,3 @@
-import { transferNLP } from "./util";
-
 type TYPE = "text" | "music" | "news";
 type STATUS = "FAQ" | "NOMATCH" | "CONTEXT_FAQ" | "GENERAL_FAQ";
 
@@ -14,7 +12,7 @@ interface IAnswerDetail {
   status: STATUS;
 }
 
-interface IAnswer {
+export interface IAnswer {
   ans_node_name: string;
   title: string;
   answer: string;
@@ -24,9 +22,3 @@ interface IAnswer {
   status: STATUS;
   to_user_name: string;
 }
-
-async function chat(query: Object): Promise<IAnswer> {
-  return transferNLP<IAnswer>("CHAT", query);
-}
-
-export { chat };

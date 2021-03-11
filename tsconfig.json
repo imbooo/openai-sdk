@@ -3,7 +3,7 @@
     "module": "commonjs",
     "declaration": true,
     "baseUrl": "./src",
-    "outDir": "./dist",
+    "outDir": "./lib",
     "target": "ES2019",
     "esModuleInterop": true,
     "declarationDir": "./types"

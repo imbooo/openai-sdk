@@ -10,3 +10,4 @@ npm-debug.log
 config/test
 dist/
 types/
+lib/
